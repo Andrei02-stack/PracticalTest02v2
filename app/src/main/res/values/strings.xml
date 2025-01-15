@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PracticalTest02v2</string>
+    <string name="timeOutput">Waiting for server data...</string>
 </resources>

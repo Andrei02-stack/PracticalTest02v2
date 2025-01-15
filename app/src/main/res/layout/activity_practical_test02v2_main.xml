@@ -33,4 +33,13 @@
         android:paddingTop="16dp"
         android:gravity="center_horizontal" />
 
+    <!-- Button to navigate to TimeActivity -->
+    <Button
+        android:id="@+id/timeActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to TimeActivity"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
 </LinearLayout>

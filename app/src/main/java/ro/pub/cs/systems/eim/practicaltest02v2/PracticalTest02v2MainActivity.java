@@ -24,6 +24,8 @@ public class PracticalTest02v2MainActivity extends AppCompatActivity {
     private Button defineButton;
     private TextView definitionOutput;
 
+    private Button timeActivityButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class PracticalTest02v2MainActivity extends AppCompatActivity {
         wordInput = findViewById(R.id.wordInput);
         defineButton = findViewById(R.id.defineButton);
         definitionOutput = findViewById(R.id.definitionOutput);
+        timeActivityButton = findViewById(R.id.timeActivityButton);
 
         // Register receiver
         IntentFilter intentFilter = new IntentFilter("ro.pub.cs.systems.eim.practicaltest02v2.DEFINITION");
@@ -45,6 +48,12 @@ public class PracticalTest02v2MainActivity extends AppCompatActivity {
             } else {
                 definitionOutput.setText("Please enter a word.");
             }
+        });
+
+        // Navigate to TimeActivity
+        timeActivityButton.setOnClickListener(view -> {
+            Intent intent = new Intent(PracticalTest02v2MainActivity.this, TimeActivity.class);
+            startActivity(intent);
         });
     }
 
